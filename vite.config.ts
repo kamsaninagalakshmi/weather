@@ -5,13 +5,11 @@ import { fileURLToPath, URL } from 'node:url';
 export default defineConfig({
   base: '/weather/',
   plugins: [react()],
-
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
   },
-
   optimizeDeps: {
     exclude: ['lucide-react'],
   },
